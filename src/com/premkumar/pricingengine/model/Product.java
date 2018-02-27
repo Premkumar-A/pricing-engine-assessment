@@ -8,7 +8,7 @@ public class Product {
 
     private String supply;
 
-    private float productPrice;
+    private float choosenPrice;
 
     private float finalPrice;
 
@@ -36,12 +36,12 @@ public class Product {
         this.supply = supply;
     }
 
-    public float getProductPrice() {
-        return productPrice;
+    public float getChoosenPrice() {
+        return choosenPrice;
     }
 
-    public void setProductPrice(float productPrice) {
-        this.productPrice = productPrice;
+    public void setChoosenPrice(float choosenPrice) {
+        this.choosenPrice = choosenPrice;
     }
 
     public float getFinalPrice() {

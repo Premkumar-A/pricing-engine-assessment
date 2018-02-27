@@ -2,7 +2,7 @@ package com.premkumar.pricingengine;
 
 import com.premkumar.pricingengine.model.CompetitorProduct;
 import com.premkumar.pricingengine.model.Product;
-import com.premkumar.pricingengine.model.utils.PricingEngineUtils;
+import com.premkumar.pricingengine.utils.PricingEngineUtils;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -34,13 +34,10 @@ public class Main {
             System.out.println("Enter Product Demand, Enter 'H' or 'L'");
             product.setDemand(new Scanner(System.in).next());
 
-            System.out.println("Enter Surveyed Price");
-            product.setProductPrice(new Scanner(System.in).nextFloat());
-
             productArrayList.add(product);
         }
 
-        System.out.println("Enter No. Of Competitor Items");
+        System.out.println("Enter No. Of Surveyed Prices");
         Scanner input2 = new Scanner(System.in);
         int noOfCompetitorProducts = input2.nextInt();
 
@@ -72,6 +69,7 @@ public class Main {
                     ++count;
                 }
             }
+            product.setChoosenPrice(totalPrice / count);
             // Using Utils to Print the Output
             PricingEngineUtils.setFinalPriceAndPrint(product, totalPrice / count);
 
